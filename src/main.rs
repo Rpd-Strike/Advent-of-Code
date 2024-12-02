@@ -25,7 +25,7 @@ macro_rules! select_both_stars {
 }
 
 fn main() {
-    let (one, two) = select_both_stars!(2017, 3);
+    let (one, two) = select_both_stars!(2024, 2);
 
     println!("---- One star ----");
     println!("{}\n", one());

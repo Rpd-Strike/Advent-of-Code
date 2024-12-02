@@ -25,13 +25,16 @@ pub fn solution_two() -> impl Display {
         .map(|r| {
             let n = r.len();
             for i in 0..n {
-                for j in (i + 1)..n {
+                for j in 0..n {
+                    if i == j {
+                        continue;
+                    }
                     if r[i] % r[j] == 0 {
                         return r[i] / r[j];
                     }
                 }
             }
-            0
+            todo!()
         })
         .sum::<i32>();
 
